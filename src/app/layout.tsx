@@ -23,6 +23,11 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: "Anime Zero Reference",
+    images: [{ url: "/images/og.jpg", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/images/og.jpg"],
   },
   robots: { index: true, follow: true },
 };

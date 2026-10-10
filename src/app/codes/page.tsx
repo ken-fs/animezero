@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { codes, game, redeemSteps, LAST_CHECKED } from "@/data/game";
 import { CopyCode } from "@/components/copy-code";
+import { VideoEmbed } from "@/components/video-embed";
+import { VIDEOS } from "@/data/videos";
 import { FaqJsonLd } from "@/components/json-ld";
 import { AdsterraBanner } from "@/components/adsterra-banner";
 import { LEADERBOARD, RECTANGLE } from "@/lib/ads";
@@ -122,6 +124,16 @@ export default function CodesPage() {
             </li>
           ))}
         </ol>
+      </section>
+
+      <section className="border-t rule py-12">
+        <h2 className="text-sm font-medium">Watch a creator redeem them</h2>
+        <p className="mt-3 max-w-[64ch] text-sm text-muted-foreground">
+          The table above is cross-checked in writing; this video is the same list
+          being typed into the in-game box, which shows the redeem flow (and how
+          the case-sensitivity bites) faster than any screenshot.
+        </p>
+        <VideoEmbed className="mt-5" {...VIDEOS.codes} />
       </section>
 
       <section className="border-t rule py-12">

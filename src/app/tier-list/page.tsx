@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { weapons, LAST_CHECKED } from "@/data/game";
 import { RarityChip } from "@/components/rarity-chip";
+import { VideoEmbed } from "@/components/video-embed";
+import { VIDEOS } from "@/data/videos";
 import { AdsterraBanner } from "@/components/adsterra-banner";
 import { RECTANGLE } from "@/lib/ads";
 
@@ -163,6 +165,7 @@ export default function TierListPage() {
           cards are the game&apos;s own; the same applies to the written descriptions
           now on each weapon page.
         </p>
+        <VideoEmbed className="mt-6" {...VIDEOS.tierlist} />
       </section>
 
       <section className="border-t rule mt-12 py-12">

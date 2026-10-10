@@ -10,6 +10,8 @@ import {
   visitsPerFavourite,
 } from "@/data/game";
 import { CopyCode } from "@/components/copy-code";
+import { VideoEmbed } from "@/components/video-embed";
+import { VIDEOS } from "@/data/videos";
 import { AdsterraBanner } from "@/components/adsterra-banner";
 import { LEADERBOARD, RECTANGLE } from "@/lib/ads";
 
@@ -33,39 +35,67 @@ export default function HomePage() {
           <span />
           <span />
         </div>
-        <p className="tag">Roblox reference · updated {LAST_CHECKED}</p>
-        <h1 className="mt-4 max-w-[22ch] text-4xl font-semibold tracking-tight sm:text-5xl">
-          Every code and weapon,
-          <br />
-          <span className="glow text-primary">on one page.</span>
-        </h1>
-        <p className="mt-5 max-w-[62ch] text-lg text-muted-foreground">
-          {game.name} is a dungeon-crawler RPG where your &quot;units&quot; are anime
-          weapons summoned at the Arsenal. This site publishes the codes that two
-          independent listings agree on, the weapon rarities that survive
-          cross-checking, and a visible gap wherever nobody has published numbers.
-        </p>
+        <div className="grid items-center gap-10 lg:grid-cols-[1.15fr_1fr]">
+          <div>
+            <p className="tag">Roblox reference · updated {LAST_CHECKED}</p>
+            <h1 className="mt-4 max-w-[22ch] text-4xl font-semibold tracking-tight sm:text-5xl">
+              Every code and weapon,
+              <br />
+              <span className="glow text-primary">on one page.</span>
+            </h1>
+            <p className="mt-5 max-w-[62ch] text-lg text-muted-foreground">
+              {game.name} is a dungeon-crawler RPG where your &quot;units&quot; are anime
+              weapons summoned at the Arsenal. This site publishes the codes that two
+              independent listings agree on, the weapon rarities that survive
+              cross-checking, and a visible gap wherever nobody has published numbers.
+            </p>
 
-        <div className="mt-8 flex flex-wrap items-center gap-3">
-          <Link href="/codes/" className="btn-ember">
-            All {codes.length} working codes
-          </Link>
-          <Link
-            href="/weapons/"
-            className="inline-flex h-10 items-center rounded-[var(--radius-control)] border rule px-5 text-sm font-medium transition-colors hover:bg-muted"
-          >
-            The weapon roster
-          </Link>
-          <Link
-            href="/tier-list/"
-            className="inline-flex h-10 items-center rounded-[var(--radius-control)] border rule px-5 text-sm font-medium transition-colors hover:bg-muted"
-          >
-            Tier list
-          </Link>
+            <div className="mt-8 flex flex-wrap items-center gap-3">
+              <Link href="/codes/" className="btn-ember">
+                All {codes.length} working codes
+              </Link>
+              <Link
+                href="/weapons/"
+                className="inline-flex h-10 items-center rounded-[var(--radius-control)] border rule px-5 text-sm font-medium transition-colors hover:bg-muted"
+              >
+                The weapon roster
+              </Link>
+              <Link
+                href="/tier-list/"
+                className="inline-flex h-10 items-center rounded-[var(--radius-control)] border rule px-5 text-sm font-medium transition-colors hover:bg-muted"
+              >
+                Tier list
+              </Link>
+            </div>
+          </div>
+
+          {/* 官方美术：游戏页的截图 + icon，右下角 icon 做品牌锚点 */}
+          <div className="relative">
+            {/* eslint-disable-next-line @next/next/no-img-element -- static export has no image optimizer */}
+            <img
+              src="/images/shot-1.webp"
+              alt="Official Anime Zero screenshot from the game's Roblox page"
+              width={768}
+              height={432}
+              fetchPriority="high"
+              decoding="async"
+              className="w-full rounded-[var(--radius-container)] border rule lift"
+            />
+            {/* eslint-disable-next-line @next/next/no-img-element -- static export has no image optimizer */}
+            <img
+              src="/images/game-icon.png"
+              alt="Anime Zero game icon"
+              width={96}
+              height={96}
+              loading="lazy"
+              decoding="async"
+              className="absolute -bottom-6 -left-6 h-20 w-20 rounded-2xl border rule bg-background shadow-lg sm:h-24 sm:w-24"
+            />
+          </div>
         </div>
 
         {topCode && (
-          <div className="mt-8 flex flex-wrap items-center gap-3 rounded-[var(--radius-container)] border rule bg-card p-4">
+          <div className="mt-10 flex flex-wrap items-center gap-3 rounded-[var(--radius-container)] border rule bg-card p-4">
             <span className="tag">newest code</span>
             <code className="font-mono text-sm font-semibold">{topCode.code}</code>
             <CopyCode code={topCode.code} />
@@ -160,6 +190,42 @@ export default function HomePage() {
       </section>
 
       <AdsterraBanner slot={RECTANGLE} className="mt-14" />
+
+      <section className="border-t rule py-12">
+        <h2 className="text-sm font-medium">The game, in its own frames</h2>
+        <p className="mt-3 max-w-[64ch] text-sm text-muted-foreground">
+          Media pulled straight from the game&apos;s Roblox page — the dungeon hub
+          and combat from the Shadow Monarch update. Nothing here is a stock image
+          or another site&apos;s asset.
+        </p>
+        <div className="mt-5 grid gap-4 sm:grid-cols-2">
+          {[
+            { src: "/images/shot-1.webp", alt: "Anime Zero hub area, official screenshot" },
+            { src: "/images/shot-2.webp", alt: "Anime Zero dungeon combat, official screenshot" },
+          ].map((s) => (
+            // eslint-disable-next-line @next/next/no-img-element -- static export has no image optimizer
+            <img
+              key={s.src}
+              src={s.src}
+              alt={s.alt}
+              width={768}
+              height={432}
+              loading="lazy"
+              decoding="async"
+              className="w-full rounded-[var(--radius-container)] border rule"
+            />
+          ))}
+        </div>
+        <p className="mt-3 text-xs text-muted-foreground">
+          Official screenshots and icon belong to {game.developer}. Used here for
+          reference with attribution.
+        </p>
+
+        <div className="mt-10">
+          <h3 className="text-sm font-medium">Watch the first hour instead of reading it</h3>
+          <VideoEmbed className="mt-4" {...VIDEOS.beginner} />
+        </div>
+      </section>
 
       <section className="border-t rule py-12">
         <h2 className="text-sm font-medium">Where to go next</h2>

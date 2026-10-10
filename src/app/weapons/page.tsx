@@ -9,6 +9,8 @@ import {
   LAST_CHECKED,
 } from "@/data/game";
 import { RarityChip } from "@/components/rarity-chip";
+import { VideoEmbed } from "@/components/video-embed";
+import { VIDEOS } from "@/data/videos";
 import { AdsterraBanner } from "@/components/adsterra-banner";
 import { RECTANGLE } from "@/lib/ads";
 
@@ -131,7 +133,35 @@ export default function WeaponsPage() {
         </section>
       )}
 
-      <section className="border-t rule mt-14 py-10">
+      <section className="border-t rule mt-14 py-12">
+        <h2 className="text-sm font-medium">The roster in the game</h2>
+        <p className="mt-3 max-w-[64ch] text-sm text-muted-foreground">
+          Two official screenshots from the game&apos;s Roblox page — the hub and a
+          dungeon run — plus a creator session cycling through most of the kits
+          named above. Screenshots belong to the developer.
+        </p>
+        <div className="mt-5 grid gap-4 sm:grid-cols-2">
+          {[
+            { src: "/images/shot-1.webp", alt: "Anime Zero hub area, official screenshot" },
+            { src: "/images/shot-2.webp", alt: "Anime Zero dungeon combat, official screenshot" },
+          ].map((s) => (
+            // eslint-disable-next-line @next/next/no-img-element -- static export has no image optimizer
+            <img
+              key={s.src}
+              src={s.src}
+              alt={s.alt}
+              width={768}
+              height={432}
+              loading="lazy"
+              decoding="async"
+              className="w-full rounded-[var(--radius-container)] border rule"
+            />
+          ))}
+        </div>
+        <VideoEmbed className="mt-8" {...VIDEOS.abilities} />
+      </section>
+
+      <section className="border-t rule py-10">
         <p className="text-sm text-muted-foreground">
           Weapons come out of the Arsenal, and rolls come out of{" "}
           <Link href="/codes/" className="text-primary underline-offset-4 hover:underline">

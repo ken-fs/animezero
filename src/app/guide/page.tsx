@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { codes, game, systems, LAST_CHECKED } from "@/data/game";
 import { CopyCode } from "@/components/copy-code";
+import { VideoEmbed } from "@/components/video-embed";
+import { VIDEOS } from "@/data/videos";
 import { AdsterraBanner } from "@/components/adsterra-banner";
 import { RECTANGLE } from "@/lib/ads";
 
@@ -109,6 +111,16 @@ export default function GuidePage() {
           </Link>{" "}
           before you commit rerolls to anything new.
         </p>
+      </section>
+
+      <section className="border-t rule py-12">
+        <h2 className="text-sm font-medium">Watch someone do the first hour</h2>
+        <p className="mt-3 max-w-[64ch] text-sm text-muted-foreground">
+          If a wall of systems reads worse than watching them, this walk-through
+          covers the same ground from a fresh account — useful because it shows the
+          actual Arsenal UI rather than describing it.
+        </p>
+        <VideoEmbed className="mt-5" {...VIDEOS.beginner} />
       </section>
 
       <section className="border-t rule py-12">
