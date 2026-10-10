@@ -75,6 +75,12 @@ function SiteFooter() {
             <Link href="/guide/" className="text-muted-foreground hover:text-foreground">
               Guide
             </Link>
+            <Link href="/discord/" className="text-muted-foreground hover:text-foreground">
+              Discord
+            </Link>
+            <Link href="/shadow-monarch/" className="text-muted-foreground hover:text-foreground">
+              Update
+            </Link>
             <Link href="/about/" className="text-muted-foreground hover:text-foreground">
               About
             </Link>

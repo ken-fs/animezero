@@ -134,6 +134,10 @@ export default function GuidePage() {
         <p className="mt-4 text-sm text-muted-foreground">
           <Link href="/about/" className="text-primary underline-offset-4 hover:underline">
             Why we leave those blank instead of copying numbers
+          </Link>{" "}
+          ·{" "}
+          <Link href="/leveling/" className="text-primary underline-offset-4 hover:underline">
+            the level-25/50 route for the gated codes
           </Link>
         </p>
       </section>

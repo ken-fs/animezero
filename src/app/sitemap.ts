@@ -12,6 +12,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/weapons/", priority: 0.9, freq: "weekly" },
     { path: "/tier-list/", priority: 0.8, freq: "weekly" },
     { path: "/guide/", priority: 0.7, freq: "weekly" },
+    { path: "/discord/", priority: 0.8, freq: "weekly" },
+    { path: "/shadow-monarch/", priority: 0.8, freq: "weekly" },
+    { path: "/leveling/", priority: 0.7, freq: "weekly" },
+    { path: "/game/", priority: 0.7, freq: "monthly" },
     { path: "/about/", priority: 0.3, freq: "monthly" },
   ];
 

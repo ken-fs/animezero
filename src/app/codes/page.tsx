@@ -155,6 +155,10 @@ export default function CodesPage() {
           <Link href="/weapons/" className="text-primary underline-offset-4 hover:underline">
             See what the roll pool actually contains
           </Link>{" "}
+          or find out{" "}
+          <Link href="/discord/" className="text-primary underline-offset-4 hover:underline">
+            where new codes land first
+          </Link>{" "}
           or{" "}
           <Link href="/tier-list/" className="text-primary underline-offset-4 hover:underline">
             read the tier list

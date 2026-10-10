@@ -250,6 +250,26 @@ export default function HomePage() {
             title="Guide"
             body="Rolls, traits, the two-slot trap and the current raid, explained."
           />
+          <NavCard
+            href="/discord/"
+            title="Discord"
+            body="The official server (111k members) where codes land first — plus why no Trello exists."
+          />
+          <NavCard
+            href="/shadow-monarch/"
+            title="Shadow Monarch update"
+            body="What the current update added, including three weapons no written roster lists."
+          />
+          <NavCard
+            href="/leveling/"
+            title="Leveling"
+            body="Level 25 and 50 unlock the biggest code bundles — the route we would take."
+          />
+          <NavCard
+            href="/game/"
+            title="The game"
+            body="Official link, place ID, launch date, and how to spot the clones."
+          />
         </div>
       </section>
     </div>

@@ -13,6 +13,7 @@ const LINKS = [
   { href: "/weapons/", label: "Weapons" },
   { href: "/tier-list/", label: "Tier list" },
   { href: "/guide/", label: "Guide" },
+  { href: "/discord/", label: "Discord" },
 ];
 
 export function SiteNav() {
