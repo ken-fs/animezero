@@ -181,7 +181,7 @@
       "slug": "cursed-king",
       "rarity": "Arcane",
       "inspiredBy": "Sukuna",
-      "note": "Reported as the strongest option below Cataclysm. One creator calls it overpowered in the current patch, which the tier lists agree with.",
+      "note": "In-game card: “The undisputed King of Curses. Dominates the fight with high-speed slashes, massive area fire bursts, and total domain control.” Sits in S tier on the tier board circulating in creator videos.",
       "sources": 3,
       "verified": true
     },
@@ -226,7 +226,7 @@
       "slug": "kings-gambit",
       "rarity": "Legendary",
       "inspiredBy": "Nagumo",
-      "note": "Area weapon that the rosters describe as a solid filler until you roll a Mythic. Good first Legendary, not an endgame pick.",
+      "note": "In-game card: “The unpredictable Order assassin. Dominates combat with rapid weapon swaps, deceptive range, and lethal multi-slash combos.”",
       "sources": 2,
       "verified": true
     },
@@ -235,7 +235,7 @@
       "slug": "twisted-agony",
       "rarity": "Legendary",
       "inspiredBy": null,
-      "note": "Purple slashes with area damage, placed in the middle of the Legendary band. None of the sources we checked names the anime character it is based on.",
+      "note": "In-game card: “The eccentric Ghost. Imbued with chaos and relentless strength.”",
       "sources": 2,
       "verified": true
     },
@@ -262,7 +262,7 @@
       "slug": "rubber-man",
       "rarity": "Epic",
       "inspiredBy": "Luffy",
-      "note": "Punches with extended range. Fine for the first hours; expected to be replaced by Epic's end.",
+      "note": "In-game card: “The legendary Straw Hat captain. Dominates close combat with fast-paced rubber combos and heavy impact strikes.”",
       "sources": 2,
       "verified": true
     },
@@ -292,6 +292,33 @@
       "note": "The chase entity of the Shadow Monarch update — creators advertise \"0.01% Sung Jin-Woo\" pulls. Rarity and mechanics are not documented by any published source.",
       "sources": 1,
       "verified": false
+    },
+    {
+      "name": "Dragon Eclipse",
+      "slug": "dragon-eclipse",
+      "rarity": "Mythic",
+      "inspiredBy": "Guts",
+      "note": "In-game card: “The legendary Black Swordsman. Dominates close combat with heavy sweeping attacks and relentless strength.” Competitor rosters list this kit under the character name “Guts” — the in-game name is Dragon Eclipse. S tier on the circulating tier board.",
+      "sources": 2,
+      "verified": true
+    },
+    {
+      "name": "Immortal Sovereign",
+      "slug": "immortal-sovereign",
+      "rarity": "Mythic",
+      "inspiredBy": "Sung Jin-Woo",
+      "note": "In-game card: “Marked for death, he defies his fate, cleaving his enemies with pure brute hate!” This is the Shadow Monarch chase entity that update videos advertise as “0.01%” — none of the four competitor rosters names it. A tier on the circulating board.",
+      "sources": 1,
+      "verified": true
+    },
+    {
+      "name": "Divine Emperor",
+      "slug": "divine-emperor",
+      "rarity": "Arcane",
+      "inspiredBy": "Kaido",
+      "note": "In-game card: “The legendary Divine Emperor. Dominates the battlefield with massive Conqueror's Haki range and heavy blade strikes.” Second Arcane weapon in the game; absent from every competitor roster checked. A tier on the circulating board.",
+      "sources": 1,
+      "verified": true
     }
   ],
   "systems": [
@@ -331,6 +358,7 @@
     "Press Redeem. If a code is level-gated (50KCCU-tier codes are not, but several need level 25 or 50), redeem it again once you pass the requirement."
   ],
   "gaps": [
+    "武器卡面数值（伤害、冷却）—— 本文的稀有度和卡面描述来自游戏内武器卡截图，但面板上的具体数值没有稳定来源，暂不收录。",
     "Roll odds and pity — the game publishes neither, and every percentage circulating online is community estimate.",
     "Trait list and exact effects — no source we checked lists the full trait table.",
     "Accessory recipes and stat values — crafting exists, the numbers behind it are not published.",

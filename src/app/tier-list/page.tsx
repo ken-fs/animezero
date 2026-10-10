@@ -105,6 +105,67 @@ export default function TierListPage() {
       <AdsterraBanner slot={RECTANGLE} className="mt-12" />
 
       <section className="border-t rule mt-12 py-12">
+        <h2 className="text-sm font-medium">
+          Tier board from in-game footage (checked 2026-10-10)
+        </h2>
+        <p className="mt-3 max-w-[64ch] text-sm text-muted-foreground">
+          The board below is the latest visual evidence we have: a tier list built
+          out of the game&apos;s own weapon cards, circulating in creator videos. It
+          disagrees with the older site rosters in two ways worth knowing — it puts
+          Cursed King at the top, and it names three weapons no written roster
+          carries: <strong className="text-foreground">Dragon Eclipse</strong>,
+          <strong className="text-foreground"> Immortal Sovereign</strong> and
+          <strong className="text-foreground"> Divine Emperor</strong>. The
+          placements are the creator&apos;s reading, not the developer&apos;s; the
+          cards themselves are from the game.
+        </p>
+        <div className="mt-5 overflow-hidden rounded-[var(--radius-container)] border rule">
+          {[
+            { tier: "S", picks: ["Cursed King", "Dragon Eclipse"] },
+            { tier: "A", picks: ["Immortal Sovereign", "Divine Emperor"] },
+            { tier: "B", picks: ["Kings Gambit", "Twisted Agony"] },
+            { tier: "C", picks: ["Cosmic Warrior", "Rubber Man"] },
+          ].map((row) => (
+            <div
+              key={row.tier}
+              className="grid grid-cols-[3rem_1fr] items-center gap-4 border-b rule bg-card px-5 py-4 last:border-b-0"
+            >
+              <span className="font-mono text-lg font-semibold text-primary tabular">
+                {row.tier}
+              </span>
+              <div className="flex flex-wrap gap-2">
+                {row.picks.map((name) => {
+                  const w = byName.get(name);
+                  return w ? (
+                    <Link
+                      key={name}
+                      href={`/weapons/${w.slug}/`}
+                      className="rounded-[var(--radius-control)] border rule px-3 py-1 text-sm transition-colors hover:border-primary hover:text-primary"
+                    >
+                      {name}
+                      {w.rarity && (
+                        <span className="ml-2 text-xs text-muted-foreground">{w.rarity}</span>
+                      )}
+                    </Link>
+                  ) : (
+                    <span key={name} className="rounded border rule px-3 py-1 text-sm">
+                      {name}
+                    </span>
+                  );
+                })}
+              </div>
+            </div>
+          ))}
+        </div>
+        <p className="mt-3 text-xs text-muted-foreground">
+          Evidence: in-game weapon cards captured from creator footage (YouTube
+          video 3QxKuMFpL1E, ~1:05–1:20), read frame by frame. Weapon names on the
+          cards are the game&apos;s own; the same applies to the written descriptions
+          now on each weapon page.
+        </p>
+      </section>
+
+      <section className="border-t rule mt-12 py-12">
         <h2 className="text-sm font-medium">Where the rankings disagree</h2>
         <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
           <li className="rounded-[var(--radius-container)] border rule bg-card p-4">
