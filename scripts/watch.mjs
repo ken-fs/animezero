@@ -15,6 +15,7 @@
  */
 import { readFileSync, writeFileSync, appendFileSync, existsSync } from "node:fs";
 import { execFileSync } from "node:child_process";
+import { homedir } from "node:os";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -132,6 +133,73 @@ const newCandidates = [...counts.entries()]
   .map(([tok, n]) => `${tok}(${n}源)`)
   .sort();
 
+/**
+ * 自动上站：≥3 个源同时列出、且不在码表里的码，直接写进 src/data/game.json 并推送。
+ *
+ * 为什么自动：/codes/ 是主意图页，竞品从 Discord 出码到上站只要几小时，
+ * 靠「通知 → 人来看 → 改数据」至少慢半天。站点对外发布的门槛是「≥2 源」，
+ * 自动写入用更严的 ≥3 源——降低聚合站错拼/串词被直接推到线上的概率。
+ * 只增不删：过期码仍需人工确认（删错了会掉已收录的码词）。
+ */
+function autoAddCodes(items) {
+  const file = join(REPO, "src", "data", "game.json");
+  try {
+    const data = JSON.parse(readFileSync(file, "utf8"));
+    for (const it of items) {
+      data.codes.push({
+        code: it.code,
+        reward: "Not listed by the sources carrying it yet — redeem it and this row gets filled in.",
+        requirement: null,
+        sources: it.sources,
+      });
+    }
+    writeFileSync(file, `${JSON.stringify(data, null, 2)}\n`);
+
+    execFileSync("git", ["add", "src/data/game.json"], { cwd: REPO });
+    execFileSync(
+      "git",
+      ["commit", "-q", "-m", `codes: auto-add ${items.map((i) => i.code).join(", ")} (${items.map((i) => `${i.sources} sources`).join(", ")})`],
+      {
+        cwd: REPO,
+        env: {
+          ...process.env,
+          GIT_AUTHOR_NAME: "animezero watch",
+          GIT_AUTHOR_EMAIL: "watch@animezero.live",
+          GIT_COMMITTER_NAME: "animezero watch",
+          GIT_COMMITTER_EMAIL: "watch@animezero.live",
+        },
+      },
+    );
+
+    // cron 里 keychain 拿不到 HTTPS 凭据 → SSH 优先，HTTPS 兜底（舰队 2026-09-28 的教训）
+    let via = "ssh";
+    try {
+      execFileSync("git", ["push", "-q", "git@github.com:ken-fs/animezero.git", "main"], {
+        cwd: REPO,
+        timeout: 60000,
+        env: { ...process.env, GIT_SSH_COMMAND: `ssh -i ${homedir()}/.ssh/id_ed25519 -o IdentitiesOnly=yes` },
+      });
+    } catch {
+      execFileSync("git", ["push", "-q", "origin", "main"], {
+        cwd: REPO,
+        timeout: 60000,
+        env: { ...process.env, GIT_TERMINAL_PROMPT: "0" },
+      });
+      via = "https";
+    }
+    return { added: items.map((i) => i.code), via };
+  } catch (e) {
+    log(`AUTO_ADD_FAILED ${e.message}`);
+    return { error: String(e.message).slice(0, 200) };
+  }
+}
+
+const AUTOMATED = [...counts.entries()]
+  .filter(([tok, n]) => n >= 3 && !known.has(tok))
+  .map(([tok, n]) => ({ code: tok, sources: n }))
+  .slice(0, 3);
+const autoResult = AUTOMATED.length ? autoAddCodes(AUTOMATED) : null;
+
 // 我们的码里，已从所有成功抓取的源上消失的 → 可能过期
 const liveSources = Object.values(perSource);
 const gone = [...known].filter((c) => liveSources.length > 0 && liveSources.every((s) => !s.has(c)));
@@ -175,6 +243,17 @@ if (newCandidates.length) {
     `${newCandidates.slice(0, 8).join(" ")} → 双源确认后更新 src/data/game.json`,
     "Sosumi",
   );
+}
+
+if (autoResult?.added?.length) {
+  log(`AUTO_ADDED ${autoResult.added.join(" ")} via ${autoResult.via}`);
+  notify(
+    "✅ 新码已自动上站",
+    `${autoResult.added.join(" ")} 已写入码表并推送（${autoResult.via}），部署约 1 分钟；奖励字段待补`,
+    "Glass",
+  );
+} else if (autoResult?.error) {
+  notify("⚠️ 新码自动上站失败", `${AUTOMATED.map((i) => i.code).join(" ")} — 手动补：${autoResult.error}`, "Basso");
 }
 
 if (gone.length) log(`GONE ${gone.join(" ")}（所有成功抓取的源都不再列出，考虑标过期）`);
