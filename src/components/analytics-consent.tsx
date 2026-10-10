@@ -16,7 +16,7 @@ import Link from "next/link";
  * value never sees the banner again.
  */
 
-const KEY = "pu-consent";
+const KEY = "az-consent";
 /**
  * GA4 measurement ID, read from the build environment.
  *
