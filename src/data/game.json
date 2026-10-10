@@ -204,15 +204,6 @@
       "verified": true
     },
     {
-      "name": "Guts",
-      "slug": "guts",
-      "rarity": "Mythic",
-      "inspiredBy": "Guts",
-      "note": "Greatsword with heavy slams and strong single-target damage. Appears in the launch banner art and in every roster we cross-checked.",
-      "sources": 2,
-      "verified": true
-    },
-    {
       "name": "Lights of Divinity",
       "slug": "lights-of-divinity",
       "rarity": "Mythic",
@@ -298,7 +289,7 @@
       "slug": "dragon-eclipse",
       "rarity": "Mythic",
       "inspiredBy": "Guts",
-      "note": "In-game card: “The legendary Black Swordsman. Dominates close combat with heavy sweeping attacks and relentless strength.” Competitor rosters list this kit under the character name “Guts” — the in-game name is Dragon Eclipse. S tier on the circulating tier board.",
+      "note": "In-game card: “The legendary Black Swordsman. Dominates close combat with heavy sweeping attacks and relentless strength.” Writer rosters list this kit as “Guts” after the character it is themed on; the card in the game says Dragon Eclipse, and this site uses the in-game name. S tier on the circulating tier board.",
       "sources": 2,
       "verified": true
     },
