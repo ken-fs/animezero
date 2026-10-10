@@ -27,7 +27,7 @@ const out = join(root, "public", ".well-known", "anvilwiki-deploy.txt");
 const SHA_RE = /^[0-9a-f]{40}$/i;
 
 function sha() {
-  const fromCi = (process.env.WORKERS_CI_COMMIT_SHA || "").trim();
+  const fromCi = (process.env.WORKERS_CI_COMMIT_SHA || process.env.GITHUB_SHA || "").trim();
   if (SHA_RE.test(fromCi)) return fromCi.toLowerCase();
   try {
     return execFileSync("git", ["rev-parse", "HEAD"], { cwd: root, encoding: "utf8" }).trim();
@@ -39,4 +39,8 @@ function sha() {
 const commit = sha();
 mkdirSync(dirname(out), { recursive: true });
 writeFileSync(out, commit + "\n", "utf8");
+// Two paths on purpose: the fleet's hygiene check reads anvilwiki-deploy.txt,
+// while the GitHub Actions deploy workflow (Ship/scripts/setup-gh-deploy.py)
+// verifies deploy.txt. Writing both keeps either check honest.
+writeFileSync(join(dirname(out), "deploy.txt"), commit + "\n", "utf8");
 console.log(`[deploy-marker] ${commit}`);
