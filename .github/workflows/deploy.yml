@@ -27,6 +27,10 @@ jobs:
 
       - name: Build
         run: npm run build
+        env:
+          # Consent-gated GA4 measurement id (repo variable, not a secret).
+          NEXT_PUBLIC_GA_ID: ${{ vars.NEXT_PUBLIC_GA_ID }}
+          NEXT_PUBLIC_SITE_URL: https://animezero.live
 
       - name: Deploy
         run: npx wrangler deploy
