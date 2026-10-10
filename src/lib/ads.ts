@@ -23,25 +23,18 @@ export type AdSlot = {
   src: string;
 };
 
-/**
- * 728×90 leaderboard. Desktop only — it overflows phones.
- *
- * TODO(animezero): paste this site's own unit key from the Adsterra dashboard.
- * Do NOT reuse another fleet site's unit — units are per-site (the scaffold
- * arrived with petsuniverse's and served its ad here until 2026-10-10).
- * Empty key = nothing rendered, which is the correct state until then.
- */
+/** 728×90 leaderboard. Desktop only — it overflows phones. */
 export const LEADERBOARD: AdSlot = {
-  key: "",
+  key: "ff136ae33df0bc297635216fdebdad96",
   width: 728,
   height: 90,
-  src: "https://bauval.org/22/13f5f745de353b152721e5703a240997",
+  src: "https://bauval.org/22/ff136ae33df0bc297635216fdebdad96",
 };
 
 /** 300×250 rectangle. Fits every viewport. */
 export const RECTANGLE: AdSlot = {
-  key: "",
+  key: "59f38171458ac734e9fb122b421400c2",
   width: 300,
   height: 250,
-  src: "https://bauval.org/22/64d70ba5acc490f105359e59521a4244",
+  src: "https://bauval.org/22/59f38171458ac734e9fb122b421400c2",
 };
