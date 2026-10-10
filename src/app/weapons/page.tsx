@@ -58,9 +58,10 @@ export default function WeaponsPage() {
         <h2 className="text-sm font-medium">The rarity ladder</h2>
         <p className="mt-2 max-w-[70ch] text-sm text-muted-foreground">
           Five rungs, and the gap between them matters more than the number on the
-          card: Zenless and Arcane are single-weapon rarities (one each as of this
-          writing), Mythic is the realistic endgame target, Legendary is the first
-          rung that competes, and Epic exists to be replaced.
+          card: Zenless is a single-weapon rarity so far, Arcane has two entries and
+          both sit at the top of the in-game board, Mythic is the realistic endgame
+          target, Legendary is the first rung that competes, and Epic exists to be
+          replaced.
         </p>
         <div className="mt-4 flex flex-wrap items-center gap-2">
           {RARITY_ORDER.map((r, i) => (
