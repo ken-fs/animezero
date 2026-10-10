@@ -1,0 +1,341 @@
+{
+  "game": {
+    "name": "Anime Zero",
+    "title": "Anime Zero [SHADOW MONARCH] 🦋👑",
+    "developer": "Zero Studio (a Lyt Project)",
+    "universeId": 10512942223,
+    "placeId": 114574503491412,
+    "created": "2026-07-16",
+    "updated": "2026-10-10",
+    "visits": 16341070,
+    "favorites": 55169,
+    "ccu": 41521,
+    "maxPlayers": 20,
+    "robloxUrl": "https://www.roblox.com/games/114574503491412/Anime-Zero",
+    "discord": "https://discord.com/invite/animezero"
+  },
+  "codes": [
+    {
+      "code": "50KCCU",
+      "reward": "500 Lucky Spins · 350 Trait Rerolls · 250,000 Coins · 5,000 Gems",
+      "requirement": null,
+      "sources": 2
+    },
+    {
+      "code": "SORRYFORZEDELAY",
+      "reward": "333 Trait Rerolls · 222,222 Coins · 333 Lucky Spins",
+      "requirement": "Level 50+",
+      "sources": 2
+    },
+    {
+      "code": "UPDATETWO",
+      "reward": "150 Trait Rerolls · 100,000 Coins · 150 Lucky Spins",
+      "requirement": "Level 50+",
+      "sources": 3
+    },
+    {
+      "code": "ARISE67",
+      "reward": "222 Trait Rerolls · 200,000 Coins · 400 Lucky Spins",
+      "requirement": "Level 50+",
+      "sources": 3
+    },
+    {
+      "code": "UPDATESOONWEPROMISE",
+      "reward": "100 Trait Rerolls · 100,000 Coins · 11 Lucky Spins",
+      "requirement": null,
+      "sources": 3
+    },
+    {
+      "code": "NEWRAID",
+      "reward": "100 Trait Rerolls · 75,000 Coins · 10,000 Gems",
+      "requirement": "Level 50+",
+      "sources": 5
+    },
+    {
+      "code": "SORRYFORDELAY",
+      "reward": "50 Trait Rerolls · 25,000 Coins · 5,000 Gems",
+      "requirement": "Level 25+",
+      "sources": 5
+    },
+    {
+      "code": "TYASHIRA",
+      "reward": "500 Lucky Spins",
+      "requirement": null,
+      "sources": 3
+    },
+    {
+      "code": "TYFRIGID",
+      "reward": "222 Trait Rerolls",
+      "requirement": null,
+      "sources": 3
+    },
+    {
+      "code": "SERVERLIVE67",
+      "reward": "222 Lucky Spins · 67 Trait Rerolls",
+      "requirement": null,
+      "sources": 3
+    },
+    {
+      "code": "BENICE2ME",
+      "reward": "100,000 Coins · 222 Trait Rerolls",
+      "requirement": null,
+      "sources": 4
+    },
+    {
+      "code": "BACKUPSTRONGER",
+      "reward": "25,000 Coins · 25 Trait Rerolls · 50 Lucky Spins",
+      "requirement": null,
+      "sources": 3
+    },
+    {
+      "code": "LAPASSION",
+      "reward": "10,000 Coins · 25 Trait Rerolls · 60 Lucky Spins",
+      "requirement": null,
+      "sources": 2
+    },
+    {
+      "code": "1MVISITS",
+      "reward": "50,000 Coins · 200 Trait Rerolls · 300 Lucky Spins",
+      "requirement": null,
+      "sources": 3
+    },
+    {
+      "code": "SIXSEVEN",
+      "reward": "67 Coins",
+      "requirement": null,
+      "sources": 2
+    },
+    {
+      "code": "LESSLAG",
+      "reward": "10 Trait Rerolls · 25 Lucky Spins · 300 Gems",
+      "requirement": null,
+      "sources": 2
+    },
+    {
+      "code": "BIGTYPO",
+      "reward": "100 Lucky Spins",
+      "requirement": null,
+      "sources": 2
+    },
+    {
+      "code": "AZISOUT",
+      "reward": "1 Lucky Spin · 5 Rolls · 1,500 Coins",
+      "requirement": null,
+      "sources": 2
+    },
+    {
+      "code": "LETSGO",
+      "reward": "20 Rolls · 5 Trait Rerolls · 2,000 Coins",
+      "requirement": null,
+      "sources": 2
+    },
+    {
+      "code": "HOP3YOU3NJOY",
+      "reward": "250 Rolls",
+      "requirement": null,
+      "sources": 2
+    },
+    {
+      "code": "PATCH1",
+      "reward": "10 Rolls · 3 Lucky Spins · 150 Gems",
+      "requirement": null,
+      "sources": 2
+    },
+    {
+      "code": "PATCH2",
+      "reward": "5,000 Coins · 3 Trait Rerolls · 250 Gems",
+      "requirement": null,
+      "sources": 2
+    },
+    {
+      "code": "PATCHNOTE67",
+      "reward": "10,000 Coins · 50 Trait Rerolls · 75 Lucky Spins",
+      "requirement": null,
+      "sources": 2
+    },
+    {
+      "code": "SORRYXD67",
+      "reward": "25 Lucky Spins · 300 Gems",
+      "requirement": null,
+      "sources": 2
+    },
+    {
+      "code": "RELEASE",
+      "reward": "1 Lucky Spin · 10 Rolls · 2,500 Coins",
+      "requirement": null,
+      "sources": 2
+    }
+  ],
+  "weapons": [
+    {
+      "name": "Cataclysm",
+      "slug": "cataclysm",
+      "rarity": "Zenless",
+      "inspiredBy": "Miyabi",
+      "note": "Fast attacks with wide area effects. The consensus best pull in every tier list published so far — Zenless is the top rung and Cataclysm is the only weapon on it.",
+      "sources": 3,
+      "verified": true
+    },
+    {
+      "name": "Cursed King",
+      "slug": "cursed-king",
+      "rarity": "Arcane",
+      "inspiredBy": "Sukuna",
+      "note": "Reported as the strongest option below Cataclysm. One creator calls it overpowered in the current patch, which the tier lists agree with.",
+      "sources": 3,
+      "verified": true
+    },
+    {
+      "name": "Shanks",
+      "slug": "shanks",
+      "rarity": "Mythic",
+      "inspiredBy": "Shanks",
+      "note": "Mythic sword fighter built around heavy energy slashes. Ranks at the top of the Mythic band in the tier lists checked.",
+      "sources": 2,
+      "verified": true
+    },
+    {
+      "name": "Alucard",
+      "slug": "alucard",
+      "rarity": "Mythic",
+      "inspiredBy": "Alucard",
+      "note": "Ranged weapon with combo attacks. A healing effect is claimed by some showcases and is not confirmed by any published source — treat it as unverified.",
+      "sources": 2,
+      "verified": true
+    },
+    {
+      "name": "Guts",
+      "slug": "guts",
+      "rarity": "Mythic",
+      "inspiredBy": "Guts",
+      "note": "Greatsword with heavy slams and strong single-target damage. Appears in the launch banner art and in every roster we cross-checked.",
+      "sources": 2,
+      "verified": true
+    },
+    {
+      "name": "Lights of Divinity",
+      "slug": "lights-of-divinity",
+      "rarity": "Mythic",
+      "inspiredBy": "Saber",
+      "note": "Golden slashes and pillars of light that hit a wide area. Mythic band, area-damage role.",
+      "sources": 2,
+      "verified": true
+    },
+    {
+      "name": "Kings Gambit",
+      "slug": "kings-gambit",
+      "rarity": "Legendary",
+      "inspiredBy": "Nagumo",
+      "note": "Area weapon that the rosters describe as a solid filler until you roll a Mythic. Good first Legendary, not an endgame pick.",
+      "sources": 2,
+      "verified": true
+    },
+    {
+      "name": "Twisted Agony",
+      "slug": "twisted-agony",
+      "rarity": "Legendary",
+      "inspiredBy": null,
+      "note": "Purple slashes with area damage, placed in the middle of the Legendary band. None of the sources we checked names the anime character it is based on.",
+      "sources": 2,
+      "verified": true
+    },
+    {
+      "name": "Thunder Prodigy",
+      "slug": "thunder-prodigy",
+      "rarity": "Epic",
+      "inspiredBy": "Killua",
+      "note": "Lightning-themed Epic weapon. An early-game option you replace when a Legendary or better drops.",
+      "sources": 2,
+      "verified": true
+    },
+    {
+      "name": "Cosmic Warrior",
+      "slug": "cosmic-warrior",
+      "rarity": "Epic",
+      "inspiredBy": "Goku",
+      "note": "Epic all-rounder that carries the first dungeons comfortably and stops being exciting by the mid-game.",
+      "sources": 2,
+      "verified": true
+    },
+    {
+      "name": "Rubber Man",
+      "slug": "rubber-man",
+      "rarity": "Epic",
+      "inspiredBy": "Luffy",
+      "note": "Punches with extended range. Fine for the first hours; expected to be replaced by Epic's end.",
+      "sources": 2,
+      "verified": true
+    },
+    {
+      "name": "Hu Tao",
+      "slug": "hu-tao",
+      "rarity": null,
+      "inspiredBy": "Hu Tao",
+      "note": "Shows up in creator videos and one competitor roster, including as an evolution target. No source we checked states its rarity, so it stays unranked here.",
+      "sources": 2,
+      "verified": false
+    },
+    {
+      "name": "Igris",
+      "slug": "igris",
+      "rarity": null,
+      "inspiredBy": null,
+      "note": "Seen in Shadow Monarch update footage (\"max upgraded OP Igris\"). No published roster lists its rarity or kit yet.",
+      "sources": 1,
+      "verified": false
+    },
+    {
+      "name": "Sung Jin-Woo",
+      "slug": "sung-jin-woo",
+      "rarity": null,
+      "inspiredBy": "Sung Jin-Woo",
+      "note": "The chase entity of the Shadow Monarch update — creators advertise \"0.01% Sung Jin-Woo\" pulls. Rarity and mechanics are not documented by any published source.",
+      "sources": 1,
+      "verified": false
+    }
+  ],
+  "systems": [
+    {
+      "name": "The Arsenal (Rolls and Lucky Spins)",
+      "detail": "Weapons are summoned here, not bought. Rolls are the common currency and Lucky Spins are the better-odds one. No official odds or pity numbers are published — any percentage you see online is community guesswork."
+    },
+    {
+      "name": "Traits and rerolls",
+      "detail": "Traits are modifiers attached to a weapon and Trait Rerolls are the currency that changes them. Rerolls are the resource most worth hoarding — four codes alone pay out hundreds of them."
+    },
+    {
+      "name": "Two weapon slots",
+      "detail": "You equip two weapons and swap between them mid-dungeon. Community reports two traps: some Zenless weapons refuse a second copy, and summoning while a weapon is equipped can overwrite it together with its trait. Check both slots before you roll."
+    },
+    {
+      "name": "Dungeons and modes",
+      "detail": "The game runs a story path plus higher-intensity modes — the current update added a raid, and creators also farm an AFK chamber and Endless-style runs. Each mode has its own recommended level, which none of the reputable listings agree on yet."
+    },
+    {
+      "name": "Evolution and awakening",
+      "detail": "Weapons evolve along a rarity ladder (Epic → Legendary → Mythic → Arcane → Zenless). Evolution generally wants a duplicate or a specific material — the exact cost per tier is unpublished."
+    },
+    {
+      "name": "Accessories",
+      "detail": "Crafted from Gems, equipped for passive bonuses. Gems come from codes and dungeon drops, which is why gem codes disappear fast."
+    },
+    {
+      "name": "Titles and quests",
+      "detail": "Account-level progression with their own rewards. Useful for early levelling because quest XP is free, unlike rerolls."
+    }
+  ],
+  "redeemSteps": [
+    "Launch Anime Zero on Roblox and wait for your character to load in.",
+    "Open the Codes menu — it sits among the buttons on the right side of the HUD.",
+    "Paste a code exactly as written. Codes are case-sensitive, so use the copy button instead of retyping.",
+    "Press Redeem. If a code is level-gated (50KCCU-tier codes are not, but several need level 25 or 50), redeem it again once you pass the requirement."
+  ],
+  "gaps": [
+    "Roll odds and pity — the game publishes neither, and every percentage circulating online is community estimate.",
+    "Trait list and exact effects — no source we checked lists the full trait table.",
+    "Accessory recipes and stat values — crafting exists, the numbers behind it are not published.",
+    "Damage formula and scaling — creator testing only, no official numbers.",
+    "The full weapon roster — rosters stop at around a dozen weapons and lag behind updates like Shadow Monarch.",
+    "\"Inspired by\" character mappings — community-reported, not official, and some remain unattributed."
+  ]
+}

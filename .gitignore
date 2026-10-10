@@ -1,0 +1,54 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+.env*
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# Next.js emits RSC payload sidecars as .txt next to each page. Harmless but
+# noisy at the web root, and they should never be crawled.
+out/__next*.txt
+out/**/__next*.txt
+
+# Written by scripts/write-deploy-marker.mjs (prebuild) at build time. Never commit
+# it: a checked-in copy always lags one commit, and one stale local `wrangler deploy`
+# is enough to make site-hygiene report the live site as out of date.
+public/.well-known/anvilwiki-deploy.txt
+
+# IndexNow key for this site (mirrored in public/<key>.txt)
+.indexnow-key
