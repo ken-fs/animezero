@@ -15,12 +15,15 @@
 | 主题 | ✅ synth（霓虹网格）—— 理由见 README |
 | IndexNow key | ✅ 已生成 `622cd5b8a39a6e4c355b7707d35b99e5`（`public/<key>.txt` + `scripts/indexnow-keys.json` 已登记） |
 | GitHub 仓库 | ✅ ken-fs/animezero（PUBLIC，2026-10-10）|
-| Worker | ✅ `animezero` 已部署（actions run 38045016439；verify 步因域名未接而红）|
+| Worker | ✅ `animezero` 已部署 · 自定义域 apex + www 已绑 · 强制 HTTPS + min TLS 1.2 + www→apex 301 |
 | 域名 | ✅ 已购买（animezero.live，Spaceship） |
-| CF zone | ✅ `51710b98e57e3f643021599b82e851ac`（NS 已改 daisy/lochlan；zone 仍 pending，等委派传播）|
-| GSC | ⏳ 待 zone active 后接（`scripts/gsc-verify-domain.mjs`）|
-| GA4 | ⏳ 待建属性（`scripts/ga-create.mjs`，用 `NEXT_PUBLIC_GA_ID` 构建变量）|
-| 广告 | ⏳ Adsterra 待申请（`src/lib/ads.ts` 留有两个 slot，key 为空时不渲染） |
+| CF zone | ✅ **active**（`51710b98e57e3f643021599b82e851ac`，NS daisy/lochlan；DNSSEC 两边均关）|
+| GSC | ✅ sc-domain:animezero.live（TXT 验证 + sitemap 已提交，2026-10-10）|
+| GA4 | ✅ 属性 558250054 · `G-LV56P6LN6W`（仓库变量 → 构建注入；同意门控实测：接受前不加载）|
+| IndexNow | ✅ 20 个 URL 已推送（202 Accepted）|
+| 巡检 | ✅ `site-hygiene animezero` 全绿（部署标记/sitemap/7 页 200/HTTPS+www）|
+| 验收基线 | ✅ verify-baseline.json（4 个目标词 + 4 个 browserPages）|
+| 广告 | ⏳ Adsterra 待申请（`src/lib/ads.ts` 两个 slot 待填 key） |
 
 ---
 
@@ -43,7 +46,11 @@ node ../scripts/browser/browser.mjs check https://animezero.live/    # 线上 co
 
 ---
 
-## 待用户手动（唯一一步）
+## ~~待用户手动（唯一一步）~~ **已自动解决**
+
+Spaceship 在 NS 切换时自动撤掉了旧 DS；CF 侧 DNSSEC 也已关。两边都 unsigned，zone 正常 active。
+
+历史记录：
 
 **Spaceship 的 DNSSEC**：animezero.live 在注册商处有一条 DS 记录（key tag 48450），而 CF zone 的 DNSSEC 已启用（key tag **2371**）——两边不匹配会让 DNS SERVFAIL。二选一：
 
