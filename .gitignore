@@ -52,3 +52,4 @@ public/.well-known/anvilwiki-deploy.txt
 
 # IndexNow key for this site (mirrored in public/<key>.txt)
 .indexnow-key
+public/.well-known/deploy.txt
