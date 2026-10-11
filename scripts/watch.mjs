@@ -237,7 +237,7 @@ if (changed.length) {
   log(`GAME_CHANGED ${changed.join(",")}: updated ${prev.game?.updated} → ${game.updated}`);
   const isUpdate = changed.includes("updated") || changed.includes("description");
   notify(
-    isUpdate ? "🆕 Anime Zero 游戏更新了" : "Anime Zero 信息有变化",
+    isUpdate ? "🆕 数据源更新" : "数据源有变化",
     `${changed.join("/")} 变化 → 查新码 / 新武器再更新站点（RADAR/站数据）`,
     isUpdate ? "Glass" : "Blow",
   );
@@ -246,7 +246,7 @@ if (changed.length) {
 if (newCandidates.length) {
   log(`🚨 NEW_CODES ${newCandidates.join(" ")}`);
   notify(
-    "🚨 Anime Zero 可能有新兑换码",
+    "🚨 新内容待确认",
     `${newCandidates.slice(0, 8).join(" ")} → 双源确认后更新 src/data/game.json`,
     "Sosumi",
   );
@@ -255,12 +255,12 @@ if (newCandidates.length) {
 if (autoResult?.added?.length) {
   log(`AUTO_ADDED ${autoResult.added.join(" ")} via ${autoResult.via}`);
   notify(
-    "✅ 新码已自动上站",
+    "✅ 自动更新完成",
     `${autoResult.added.join(" ")} 已写入码表并推送（${autoResult.via}），部署约 1 分钟；奖励字段待补`,
     "Glass",
   );
 } else if (autoResult?.error) {
-  notify("⚠️ 新码自动上站失败", `${AUTOMATED.map((i) => i.code).join(" ")} — 手动补：${autoResult.error}`, "Basso");
+  notify("⚠️ 自动更新失败", `${AUTOMATED.map((i) => i.code).join(" ")} — 手动补：${autoResult.error}`, "Basso");
 }
 
 if (gone.length) log(`GONE ${gone.join(" ")}（所有成功抓取的源都不再列出，考虑标过期）`);
