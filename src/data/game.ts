@@ -32,6 +32,10 @@ export type Code = {
   reward: string;
   requirement: string | null;
   sources: number;
+  /** YouTube ID of the creator footage that shows this code redeemed in-game.
+   *  Set only on the exceptions that shipped before a second listing carried
+   *  them — the row gets a video badge so the sourcing stays traceable. */
+  video?: string;
 };
 
 export type System = { name: string; detail: string };

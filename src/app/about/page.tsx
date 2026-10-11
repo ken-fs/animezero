@@ -37,8 +37,8 @@ export default function AboutPage() {
 
       <section className="grid gap-3 sm:grid-cols-3">
         <Rule
-          title="Codes need two independent listings"
-          body={`All ${codes.length} codes on this site appear in at least two independent listings with matching rewards. Codes seen only once are held back until a second source confirms them. Where listings disagreed on a reward, the page says so instead of picking a favourite silently.`}
+          title="Codes need two listings — or in-game video proof"
+          body={`Almost every one of the ${codes.length} codes here appears in at least two independent listings with matching rewards; a code seen only once is held back unless a creator video shows it redeemed in-game, and those rows carry a ▶ video badge linking the clip (rewards read off the in-game toast). Where listings disagreed on a reward, the page says so instead of picking a favourite silently.`}
         />
         <Rule
           title="Rarities need two rosters to agree"

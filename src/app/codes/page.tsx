@@ -59,9 +59,10 @@ export default function CodesPage() {
         </h1>
         <p className="mt-4 max-w-[62ch] text-muted-foreground">
           {codes.length} codes, each with the reward it actually pays and the level
-          gate where one exists. Every code here appears in at least two independent
-          listings — codes circulating from a single source are held back until a
-          second one matches.
+          gate where one exists. Almost every code here appears in at least two
+          independent listings — the rows carrying a ▶ video badge were redeemed on
+          camera in creator footage (in-game proof, linked on the row) and go out as
+          video-verified while the listings catch up.
         </p>
       </header>
 
@@ -82,7 +83,20 @@ export default function CodesPage() {
                 key={c.code}
                 className="grid grid-cols-[1fr_auto] items-center gap-4 border-b rule bg-card px-5 py-4 last:border-b-0 sm:grid-cols-[minmax(0,0.9fr)_minmax(0,1.6fr)_minmax(0,0.7fr)_auto]"
               >
-                <code className="font-mono text-sm font-semibold break-all">{c.code}</code>
+                <div className="flex flex-wrap items-center gap-2">
+                  <code className="font-mono text-sm font-semibold break-all">{c.code}</code>
+                  {c.video && (
+                    <a
+                      href={`https://www.youtube.com/watch?v=${c.video}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title="Redeemed on camera in creator footage"
+                      className="shrink-0 rounded-[4px] border rule px-1.5 py-0.5 text-[10px] font-medium text-muted-foreground hover:text-foreground"
+                    >
+                      ▶ video
+                    </a>
+                  )}
+                </div>
                 <span className="col-span-2 text-sm text-muted-foreground sm:col-span-1">
                   {c.reward}
                 </span>
@@ -102,8 +116,13 @@ export default function CodesPage() {
           </strong>
           . Where listings disagreed — as they did over BENICE2ME and the spin count
           on UPDATESOONWEPROMISE — the majority reading is shown and this page
-          says so. Codes retire without warning in this genre, so the list gets
-          re-checked rather than trusted.
+          says so. The <strong className="font-medium text-foreground">▶ video</strong>{" "}
+          rows are the one exception the other way: they were redeemed on camera in
+          creator footage before any second listing carried them, so their rewards
+          are read off the in-game toast — the clip is linked on the row, and each
+          one folds into the standard two-listing tier as the aggregators catch up.
+          Codes retire without warning in this genre, so the list gets re-checked
+          rather than trusted.
         </p>
       </section>
 
