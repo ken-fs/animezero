@@ -33,7 +33,7 @@ export default function ShadowMonarchPage() {
       </nav>
 
       <header className="pt-6 pb-10">
-        <p className="tag">Current update · checked {LAST_CHECKED}</p>
+        <p className="tag">Previous update · checked {LAST_CHECKED}</p>
         <h1 className="mt-3 max-w-[26ch] text-3xl font-semibold tracking-tight sm:text-4xl">
           The Shadow Monarch update
         </h1>
