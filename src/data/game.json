@@ -16,6 +16,18 @@
   },
   "codes": [
     {
+      "code": "TRIALSPATCH",
+      "reward": "1,000,000 Coins · 300 Trait Rerolls · 150 Lucky Spins",
+      "requirement": "Level 35+",
+      "sources": 2
+    },
+    {
+      "code": "UPDATE3LEGACY",
+      "reward": "322,222 Coins · 122 Trait Rerolls · 333 Lucky Spins",
+      "requirement": null,
+      "sources": 2
+    },
+    {
       "code": "SORRY4DELAY",
       "reward": "222,222 Coins · 222 Trait Rerolls · 222 Lucky Spins",
       "requirement": null,
