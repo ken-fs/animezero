@@ -6,10 +6,10 @@
     "universeId": 10512942223,
     "placeId": 114574503491412,
     "created": "2026-07-16",
-    "updated": "2026-10-12",
-    "visits": 27401140,
-    "favorites": 64137,
-    "ccu": 47373,
+    "updated": "2026-10-13",
+    "visits": 31558300,
+    "favorites": 81027,
+    "ccu": 30733,
     "maxPlayers": 20,
     "robloxUrl": "https://www.roblox.com/games/114574503491412/Anime-Zero",
     "discord": "https://discord.com/invite/animezero"
@@ -37,15 +37,13 @@
       "code": "SORRY4DELAY",
       "reward": "222,222 Coins · 222 Trait Rerolls · 222 Lucky Spins",
       "requirement": null,
-      "sources": 1,
-      "video": "UnrFFSLqf-Y"
+      "sources": 2
     },
     {
       "code": "3TIMESACHARM",
       "reward": "111,111 Coins · 111 Trait Rerolls · 111 Lucky Spins",
       "requirement": null,
-      "sources": 1,
-      "video": "UnrFFSLqf-Y"
+      "sources": 2
     },
     {
       "code": "50KCCU",
@@ -342,6 +340,33 @@
       "note": "In-game card: “The legendary Divine Emperor. Dominates the battlefield with massive Conqueror's Haki range and heavy blade strikes.” Second Arcane weapon in the game; absent from every competitor roster checked. A tier on the circulating board.",
       "sources": 1,
       "verified": true
+    },
+    {
+      "name": "Void Arbiter",
+      "slug": "void-arbiter",
+      "rarity": null,
+      "inspiredBy": null,
+      "note": "The unit the Void Arbiter update (UPD 3) is named after. You don't summon it at the Arsenal. One creator got it by clearing Trials floor 200. In that video the evolve screen asked for 5,000,000 Coins and 50 Magic Pendants, among other items, and the skill tree maxed at level 104. No source states its rarity.",
+      "sources": 1,
+      "verified": false
+    },
+    {
+      "name": "Ye Shunguang",
+      "slug": "ye-shunguang",
+      "rarity": null,
+      "inspiredBy": "Ye Shunguang",
+      "note": "One of the new units from the Void Arbiter update, earned in Trials instead of the Arsenal. The October 13 patch reworked it: a new 6-hit basic combo, a new block animation for both forms, and a fix for skill 3 firing the wrong way. That comes from patch notes read out in a creator video. Rarity and the in-game card name aren't published.",
+      "sources": 2,
+      "verified": false
+    },
+    {
+      "name": "Astra Yao",
+      "slug": "astra-yao",
+      "rarity": null,
+      "inspiredBy": "Astra Yao",
+      "note": "A support unit from the Void Arbiter update, earned in Trials. Its skill buffs your damage, so creators pair it with a main damage unit. The October 13 patch made that buff stronger and last longer, per patch notes shown in a creator video. Rarity and the in-game card name aren't published.",
+      "sources": 3,
+      "verified": false
     }
   ],
   "systems": [
@@ -359,7 +384,7 @@
     },
     {
       "name": "Dungeons and modes",
-      "detail": "The game runs a story path plus higher-intensity modes — the current update added a raid, and creators also farm an AFK chamber and Endless-style runs. Each mode has its own recommended level, which none of the reputable listings agree on yet."
+      "detail": "The game runs a story path plus higher-intensity modes — the Shadow Monarch update added a raid, and creators also farm an AFK chamber and Endless-style runs. The Void Arbiter update added Trials, a tower mode: each stage is 5 floors of 2 waves, and the new units drop from it (Void Arbiter itself at floor 200). Creators say the October 13 patch made Trials easier. Each mode has its own recommended level, which none of the reputable listings agree on yet."
     },
     {
       "name": "Evolution and awakening",
@@ -386,7 +411,7 @@
     "Trait list and exact effects — no source we checked lists the full trait table.",
     "Accessory recipes and stat values — crafting exists, the numbers behind it are not published.",
     "Damage formula and scaling — creator testing only, no official numbers.",
-    "The full weapon roster — rosters stop at around a dozen weapons and lag behind updates like Shadow Monarch.",
+    "The full weapon roster — rosters stop at around a dozen weapons and lag behind updates like Shadow Monarch and Void Arbiter. Frieren and Rin Okumura are also named in Void Arbiter coverage but aren't listed here yet.",
     "\"Inspired by\" character mappings — community-reported, not official, and some remain unattributed."
   ]
 }
