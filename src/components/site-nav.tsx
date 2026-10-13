@@ -12,6 +12,7 @@ const LINKS = [
   { href: "/codes/", label: "Codes" },
   { href: "/weapons/", label: "Weapons" },
   { href: "/tier-list/", label: "Tier list" },
+  { href: "/traits/", label: "Traits" },
   { href: "/guide/", label: "Guide" },
   { href: "/discord/", label: "Discord" },
 ];

@@ -108,8 +108,8 @@ export default function LevelingPage() {
             The full {codes.length}-code list
           </Link>{" "}
           ·{" "}
-          <Link href="/guide/" className="text-primary underline-offset-4 hover:underline">
-            how the Arsenal and traits work
+          <Link href="/traits/" className="text-primary underline-offset-4 hover:underline">
+            how traits and rerolls work
           </Link>{" "}
           ·{" "}
           <Link href="/discord/" className="text-primary underline-offset-4 hover:underline">
