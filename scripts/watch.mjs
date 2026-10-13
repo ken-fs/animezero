@@ -232,24 +232,34 @@ if (!prev) {
   process.exit(0);
 }
 
+// 2026-10-13：变化交给自动更新引擎（Ship/scripts/autopilot）——它多源确认后改数据、构建、上线，再推飞书说改了什么；
+// 引擎不在才退回原来的「请手动更新」通知
+async function handoff(reason, fallback) {
+  try {
+    const { trigger } = await import(join(SHIP, "scripts", "autopilot", "trigger.mjs"));
+    if (trigger("animezero", reason)) { log(`AUTOPILOT ${reason}`); return; }
+  } catch {}
+  fallback();
+}
+
 const changed = ["name", "description", "updated"].filter((k) => prev.game?.[k] !== game[k]);
 if (changed.length) {
   log(`GAME_CHANGED ${changed.join(",")}: updated ${prev.game?.updated} → ${game.updated}`);
   const isUpdate = changed.includes("updated") || changed.includes("description");
-  notify(
+  await handoff(`Anime Zero ${isUpdate ? "游戏更新" : "数据源变化"}（${changed.join("/")}）：查新码 / 新武器`, () => notify(
     isUpdate ? "🆕 数据源更新" : "数据源有变化",
     `${changed.join("/")} 变化 → 查新码 / 新武器再更新站点（RADAR/站数据）`,
     isUpdate ? "Glass" : "Blow",
-  );
+  ));
 }
 
 if (newCandidates.length) {
   log(`🚨 NEW_CODES ${newCandidates.join(" ")}`);
-  notify(
+  await handoff(`码源出现本站没有的码 ${newCandidates.slice(0, 8).join(" ")}`, () => notify(
     "🚨 新内容待确认",
     `${newCandidates.slice(0, 8).join(" ")} → 双源确认后更新 src/data/game.json`,
     "Sosumi",
-  );
+  ));
 }
 
 if (autoResult?.added?.length) {
