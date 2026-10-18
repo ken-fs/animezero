@@ -1,15 +1,15 @@
 {
   "game": {
     "name": "Anime Zero",
-    "title": "[UPD 4] Anime Zero",
+    "title": "Anime Zero [SOLAR RADIANCE ☀️]",
     "developer": "Zero Studio (a Lyt Project)",
     "universeId": 10512942223,
     "placeId": 114574503491412,
     "created": "2026-07-16",
     "updated": "2026-10-18",
-    "visits": 43129066,
-    "favorites": 113206,
-    "ccu": 42955,
+    "visits": 43829388,
+    "favorites": 128401,
+    "ccu": 42736,
     "maxPlayers": 20,
     "robloxUrl": "https://www.roblox.com/games/114574503491412/Anime-Zero",
     "discord": "https://discord.com/invite/animezero"
@@ -374,6 +374,15 @@
       "rarity": null,
       "inspiredBy": null,
       "note": "A new fighter from Update 4: Tidal High Rise. The official game description says you climb the flooding tower to get it. Rarity, kit and stats aren't published yet, so they're left blank.",
+      "sources": 1,
+      "verified": false
+    },
+    {
+      "name": "Solar Radiance",
+      "slug": "solar-radiance",
+      "rarity": null,
+      "inspiredBy": null,
+      "note": "The new fighter from the Evil Reflection raid. The official game description says you fight your own reflection, beat your Evil Twin and unlock Solar Radiance. Rarity, kit and stats aren't published yet, so they're left blank.",
       "sources": 1,
       "verified": false
     }
