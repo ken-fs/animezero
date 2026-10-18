@@ -1,15 +1,15 @@
 {
   "game": {
     "name": "Anime Zero",
-    "title": "[UPD 3] Anime Zero",
+    "title": "[UPD 4] Anime Zero",
     "developer": "Zero Studio (a Lyt Project)",
     "universeId": 10512942223,
     "placeId": 114574503491412,
     "created": "2026-07-16",
-    "updated": "2026-10-16",
-    "visits": 40521657,
-    "favorites": 96881,
-    "ccu": 23710,
+    "updated": "2026-10-18",
+    "visits": 43129066,
+    "favorites": 113206,
+    "ccu": 42955,
     "maxPlayers": 20,
     "robloxUrl": "https://www.roblox.com/games/114574503491412/Anime-Zero",
     "discord": "https://discord.com/invite/animezero"
@@ -366,6 +366,15 @@
       "inspiredBy": "Astra Yao",
       "note": "A support unit from the Void Arbiter update, earned in Trials. Its skill buffs your damage, so creators pair it with a main damage unit. The October 13 patch made that buff stronger and last longer, per patch notes shown in a creator video. Rarity and the in-game card name aren't published.",
       "sources": 3,
+      "verified": false
+    },
+    {
+      "name": "Crimson Eclipse",
+      "slug": "crimson-eclipse",
+      "rarity": null,
+      "inspiredBy": null,
+      "note": "A new fighter from Update 4: Tidal High Rise. The official game description says you climb the flooding tower to get it. Rarity, kit and stats aren't published yet, so they're left blank.",
+      "sources": 1,
       "verified": false
     }
   ],
