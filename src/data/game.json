@@ -16,6 +16,18 @@
   },
   "codes": [
     {
+      "code": "THANKS4WAITING",
+      "reward": "300 Trait Rerolls · 1,000,000 Coins · 150 Lucky Spins",
+      "requirement": null,
+      "sources": 2
+    },
+    {
+      "code": "UPDATEFOUR",
+      "reward": "300 Trait Rerolls · 1,000,000 Coins · 150 Lucky Spins",
+      "requirement": "Level 50+",
+      "sources": 2
+    },
+    {
       "code": "FORGIVEUSPLEASE",
       "reward": "2,000,000 Coins · 10,000 Gems · 125 Trait Rerolls · 222 Lucky Spins",
       "requirement": null,
