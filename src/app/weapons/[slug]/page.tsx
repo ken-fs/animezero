@@ -43,6 +43,28 @@ export default async function WeaponPage({ params }: PageProps<"/weapons/[slug]"
   const others = sortedWeapons.filter((w) => w.slug !== weapon.slug).slice(0, 8);
   const newestCode = codes[0];
 
+  const faqs: { q: string; a: string }[] = [
+    {
+      q: `What rarity is ${weapon.name} in Anime Zero?`,
+      a: weapon.rarity
+        ? `${weapon.name} is a ${weapon.rarity} weapon${weapon.inspiredBy ? `, themed after ${weapon.inspiredBy}` : ""}. Confirmed by ${weapon.sources} independent source${weapon.sources === 1 ? "" : "s"}.`
+        : `Not published yet — ${weapon.name} appears in game footage but no roster states its rarity. This page tracks the gap.`,
+    },
+    {
+      q: `Is ${weapon.name} good in Anime Zero?`,
+      a: `Rarity is a floor, not a verdict. Real output depends on the traits rolled onto it and whether its kit matches what you farm — check if its ultimate hits multiple targets and whether its range fits your two-slot swap.`,
+    },
+  ];
+  const faqLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+
   return (
     <article className="mx-auto w-full max-w-6xl px-5">
       <nav className="pt-8 text-sm text-muted-foreground" aria-label="Breadcrumb">
@@ -192,6 +214,22 @@ export default async function WeaponPage({ params }: PageProps<"/weapons/[slug]"
           </div>
         </aside>
       </div>
+
+      <section className="pb-16">
+        <h2 className="text-sm font-medium">Questions</h2>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+        />
+        <dl className="mt-4 space-y-4">
+          {faqs.map((f) => (
+            <div key={f.q.slice(0, 24)}>
+              <dt className="text-[15px] font-medium">{f.q}</dt>
+              <dd className="mt-1 max-w-[62ch] text-sm leading-relaxed text-muted-foreground">{f.a}</dd>
+            </div>
+          ))}
+        </dl>
+      </section>
     </article>
   );
 }
