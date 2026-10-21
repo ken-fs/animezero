@@ -18,6 +18,8 @@ import { execFileSync } from "node:child_process";
 import { homedir } from "node:os";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
+// TryHardGuides 前台是 BigScoots JS 挑战（直抓 403），走 wp-json 拿同一篇正文
+import { sourcePage } from "../../scripts/lib/tryhardguides.mjs";
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const REPO = join(HERE, "..");
@@ -124,7 +126,7 @@ const perSource = {};
 const sourceErrors = [];
 for (const s of CODE_SOURCES) {
   try {
-    perSource[s.id] = extractCodes(await get(s.url));
+    perSource[s.id] = extractCodes(await sourcePage(s.url, get));
   } catch (e) {
     sourceErrors.push(`${s.id}: ${e.message}`);
   }
