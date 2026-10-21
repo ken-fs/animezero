@@ -16,7 +16,8 @@ import { AdsterraBanner } from "@/components/adsterra-banner";
 import { LEADERBOARD, RECTANGLE } from "@/lib/ads";
 
 export const metadata: Metadata = {
-  title: "Anime Zero codes, weapons and tier list",
+  // Homepage owns "<game> wiki" (the template's 2026-10-13 rule); /codes/ owns the codes queries.
+  title: { absolute: "Anime Zero Wiki: Codes, Weapons & Tier List" },
   description:
     "Every working Anime Zero code with its reward and level gate, the weapon roster with the rarities two sources agree on, and an honest map of what nobody has published yet. Fan-made.",
   alternates: { canonical: "/" },
@@ -39,10 +40,9 @@ export default function HomePage() {
           <div>
             <p className="tag">Roblox reference · updated {LAST_CHECKED}</p>
             <h1 className="mt-4 max-w-[22ch] text-4xl font-semibold tracking-tight sm:text-5xl">
-              Every code and weapon,
-              <br />
-              <span className="glow text-primary">on one page.</span>
+              {game.name} <span className="glow text-primary">Wiki</span>
             </h1>
+            <p className="mt-3 text-xl font-medium">Every code and weapon, on one page.</p>
             <p className="mt-5 max-w-[62ch] text-lg text-muted-foreground">
               {game.name} is a dungeon-crawler RPG where your &quot;units&quot; are anime
               weapons summoned at the Arsenal. This site publishes the codes that two
@@ -187,6 +187,31 @@ export default function HomePage() {
             </Link>
           </p>
         </div>
+      </section>
+
+      {/* Every weapon page linked from home (template fix c6be7af): with only /weapons/ linked, half the weapon
+          pages sat at "Discovered – not indexed" 11 days after launch. */}
+      <section className="border-t rule py-12">
+        <div className="flex items-baseline justify-between gap-4">
+          <h2 className="text-sm font-medium">Every {game.name} weapon</h2>
+          <Link href="/weapons/" className="text-sm text-primary underline-offset-4 hover:underline">
+            All {weapons.length} weapons
+          </Link>
+        </div>
+        <ul className="mt-4 flex flex-wrap gap-2">
+          {[...weapons]
+            .sort((a, b) => a.name.localeCompare(b.name, "en"))
+            .map((w) => (
+              <li key={w.slug}>
+                <Link
+                  href={`/weapons/${w.slug}/`}
+                  className="inline-block rounded-[var(--radius-control)] border rule bg-card px-3 py-1.5 text-sm font-medium transition-colors hover:bg-muted"
+                >
+                  {w.name}
+                </Link>
+              </li>
+            ))}
+        </ul>
       </section>
 
       <AdsterraBanner slot={RECTANGLE} className="mt-14" />

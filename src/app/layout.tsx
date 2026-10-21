@@ -16,13 +16,13 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     default: "Anime Zero codes, weapons and tier list",
-    template: "%s | Anime Zero Reference",
+    template: "%s | Anime Zero Wiki",
   },
   description:
     "Every working Anime Zero code with its reward and level requirement, the weapon roster with what is actually confirmed, and an honest map of what nobody has published. Fan-made, every number has a source.",
   openGraph: {
     type: "website",
-    siteName: "Anime Zero Reference",
+    siteName: "Anime Zero Wiki",
     images: [{ url: "/images/og.jpg", width: 1200, height: 630 }],
   },
   twitter: {
@@ -36,7 +36,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className="h-full" suppressHydrationWarning>
       <body className="flex min-h-full flex-col antialiased">
-        <WebsiteJsonLd name="Anime Zero Reference" />
+        <WebsiteJsonLd name="Anime Zero Wiki" />
         <SiteNav />
         <main className="flex-1">{children}</main>
         <SiteFooter />
@@ -52,7 +52,7 @@ function SiteFooter() {
       <div className="mx-auto w-full max-w-6xl px-5 py-10">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
           <div className="max-w-md">
-            <p className="text-sm font-medium">Anime Zero Reference</p>
+            <p className="text-sm font-medium">Anime Zero Wiki</p>
             <p className="mt-2 text-sm text-muted-foreground">
               An independent player reference for {game.name} on Roblox. Not
               affiliated with {game.developer} or Roblox Corporation. Game names

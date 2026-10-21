@@ -12,4 +12,4 @@ export const SITE_URL = (
   process.env.NEXT_PUBLIC_SITE_URL ?? "https://animezero.live"
 ).replace(/\/+$/, "");
 
-export const SITE_NAME = "Anime Zero Reference";
+export const SITE_NAME = "Anime Zero Wiki";

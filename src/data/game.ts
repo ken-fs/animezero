@@ -25,6 +25,12 @@ export type Weapon = {
   note: string;
   sources: number;
   verified: boolean;
+  /** How this one is obtained when it is NOT an Arsenal summon (raid/craft weapons). */
+  howToGet?: string;
+  /** Kit / unlock facts shown by creators, each line backed by the videos in `evidence`. */
+  details?: string[];
+  /** YouTube ids the details were read from. */
+  evidence?: string[];
 };
 
 export type Code = {

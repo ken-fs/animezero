@@ -23,12 +23,16 @@ export async function generateMetadata({
   const { slug } = await params;
   const weapon = weapons.find((x) => x.slug === slug);
   if (!weapon) return {};
-  const title = weapon.rarity
-    ? `${weapon.name} in Anime Zero: ${weapon.rarity} weapon`
-    : `${weapon.name} in Anime Zero: rarity not published`;
+  const title = weapon.howToGet
+    ? `How to Get ${weapon.name} in Anime Zero${weapon.inspiredBy ? ` (${weapon.inspiredBy})` : ""}`
+    : weapon.rarity
+      ? `${weapon.name} in Anime Zero: ${weapon.rarity} weapon`
+      : `${weapon.name} in Anime Zero: rarity not published`;
   return {
     title,
-    description: weapon.rarity
+    description: weapon.howToGet
+      ? `${weapon.name} in Anime Zero: ${weapon.howToGet.split(". ")[0]}. What it does and what is still unpublished.`.slice(0, 160)
+      : weapon.rarity
       ? `${weapon.name} is a ${weapon.rarity}-rarity Anime Zero weapon${weapon.inspiredBy ? `, themed after ${weapon.inspiredBy}` : ""}. What two independent sources agree on, and what is still missing.`
       : `${weapon.name} appears in Anime Zero but no published roster states its rarity or kit. Here is what that means and how to check it in game.`,
     alternates: { canonical: `/weapons/${weapon.slug}/` },
@@ -44,6 +48,7 @@ export default async function WeaponPage({ params }: PageProps<"/weapons/[slug]"
   const newestCode = codes[0];
 
   const faqs: { q: string; a: string }[] = [
+    ...(weapon.howToGet ? [{ q: `How do you get ${weapon.name} in Anime Zero?`, a: weapon.howToGet }] : []),
     {
       q: `What rarity is ${weapon.name} in Anime Zero?`,
       a: weapon.rarity
@@ -106,6 +111,10 @@ export default async function WeaponPage({ params }: PageProps<"/weapons/[slug]"
               ) : null}
               . {weapon.note}
             </>
+          ) : weapon.howToGet ? (
+            <>
+              {weapon.howToGet} Its rarity isn&apos;t published yet, so this page leaves it blank.
+            </>
           ) : (
             <>
               {weapon.name} is real — it shows up in {game.name} footage — but no
@@ -124,6 +133,31 @@ export default async function WeaponPage({ params }: PageProps<"/weapons/[slug]"
             <Stat label="Themed after" value={weapon.inspiredBy ?? "not attributed"} />
             <Stat label="Agreement" value={`${weapon.sources} source${weapon.sources === 1 ? "" : "s"}`} />
           </dl>
+
+          {weapon.details && weapon.details.length > 0 && (
+            <>
+              <h2 className="mt-12 text-sm font-medium">What creators have shown so far</h2>
+              <ul className="mt-3 max-w-[62ch] list-disc space-y-2 pl-5 text-sm text-muted-foreground">
+                {weapon.details.map((d) => (
+                  <li key={d}>{d}</li>
+                ))}
+              </ul>
+              {weapon.evidence && weapon.evidence.length > 0 && (
+                <p className="mt-3 text-xs text-muted-foreground">
+                  Read from creator videos:{" "}
+                  {weapon.evidence.map((id, i) => (
+                    <span key={id}>
+                      {i > 0 && ", "}
+                      <a href={`https://www.youtube.com/watch?v=${id}`} className="underline-offset-4 hover:underline" rel="nofollow noopener" target="_blank">
+                        {id}
+                      </a>
+                    </span>
+                  ))}
+                  . Numbers change with patches; check in game before you grind.
+                </p>
+              )}
+            </>
+          )}
 
           <h2 className="mt-12 text-sm font-medium">What the roster notes say</h2>
           <p className="mt-3 max-w-[62ch] text-sm text-muted-foreground">
@@ -167,9 +201,8 @@ export default async function WeaponPage({ params }: PageProps<"/weapons/[slug]"
           <div className="rounded-[var(--radius-container)] border rule bg-card p-5">
             <h2 className="text-sm font-medium">Getting it</h2>
             <p className="mt-2 text-sm text-muted-foreground">
-              Weapons are summoned at the Arsenal with Rolls (standard) or Lucky Spins
-              (better odds). Odds and pity are unpublished — treat any percentage you
-              see quoted as a community estimate, including on this site.
+              {weapon.howToGet ??
+                "Weapons are summoned at the Arsenal with Rolls (standard) or Lucky Spins (better odds). Odds and pity are unpublished — treat any percentage you see quoted as a community estimate, including on this site."}
             </p>
             <Link
               href="/guide/"

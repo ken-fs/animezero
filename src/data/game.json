@@ -384,19 +384,47 @@
       "name": "Crimson Eclipse",
       "slug": "crimson-eclipse",
       "rarity": null,
-      "inspiredBy": null,
-      "note": "A new fighter from Update 4: Tidal High Rise. The official game description says you climb the flooding tower to get it. Rarity, kit and stats aren't published yet, so they're left blank.",
-      "sources": 1,
-      "verified": false
+      "inspiredBy": "Chisa",
+      "note": "The fighter from the Update 4 Tidal High Rise mode, themed after Chisa. Twin blades and giant scissors. You craft it from the mode's drops. Rarity isn't published yet.",
+      "sources": 4,
+      "verified": false,
+      "howToGet": "You can't summon Crimson Eclipse. Clear Tidal High Rise (Nightmare only), collect the Crimson Eclipse materials it drops, then craft it in the crafting menu. The materials only drop, you can't craft them.",
+      "details": [
+        "Tidal High Rise: climb a flooding tower from the underground parking lot before the water catches you. On each floor you clear enemies, pull the lever and hold the gate, and there's a mini-boss on every floor.",
+        "Every gate you hold pays coins and XP even if the run fails. Clearing the roof pays 18,000 coins and 500 gems on top of the Crimson Eclipse materials.",
+        "It fights with twin blades and giant scissors.",
+        "It has an evolution (Evo). Evolving takes another, bigger batch of the mode's materials, and its ultimate skill unlocks through the skill tree with more drops.",
+        "Drops are slow. Creators suggest farming it with a party rather than solo."
+      ],
+      "evidence": [
+        "Ku63If-qHT4",
+        "sRV2umGcNN8",
+        "HgIX_biPpiI",
+        "XXYbKRybuhk"
+      ]
     },
     {
       "name": "Solar Radiance",
       "slug": "solar-radiance",
       "rarity": null,
-      "inspiredBy": null,
-      "note": "The new fighter from the Evil Reflection raid. The official game description says you fight your own reflection, beat your Evil Twin and unlock Solar Radiance. Rarity, kit and stats aren't published yet, so they're left blank.",
-      "sources": 1,
-      "verified": false
+      "inspiredBy": "Cha Hae-In",
+      "note": "The fighter from the Update 4 Evil Reflection raid, themed after Cha Hae-In from Solo Leveling. You can't summon it: you craft it from the raid's drops. Rarity isn't published yet.",
+      "sources": 4,
+      "verified": false,
+      "howToGet": "You can't summon Solar Radiance. Play the Evil Reflection raid (Nightmare only), farm the materials it drops, then craft Solar Radiance in the crafting menu.",
+      "details": [
+        "Evil Reflection is a Nightmare-only raid: four waves of copies of your own avatar using weapons from other maps, then a fifth wave where your evil twin fights with your own gear.",
+        "The evil twin calls for help at 60% health and splits apart after taking damage at 50% and 25%.",
+        "After each of waves one to four you pick one of three mirror blessings. You get three lives for the whole run.",
+        "Its awakened ultimate combines with the Shadow Lord ultimate into one dual ultimate. Creators call it the first combined ultimate in the game.",
+        "One creator counts five skills on it, and it plays as a fast skill-spam damage dealer."
+      ],
+      "evidence": [
+        "Ku63If-qHT4",
+        "DQeS14RFIKw",
+        "OtFUaHT2vyY",
+        "hmZZKhPmVIw"
+      ]
     }
   ],
   "systems": [
