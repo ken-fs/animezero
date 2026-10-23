@@ -16,6 +16,12 @@
   },
   "codes": [
     {
+      "code": "MINICODE",
+      "reward": "10 Trait Rerolls · 100 Gems · 10 Lucky Spins",
+      "requirement": null,
+      "sources": 2
+    },
+    {
       "code": "THANKS4WAITING",
       "reward": "300 Trait Rerolls · 1,000,000 Coins · 150 Lucky Spins",
       "requirement": null,
