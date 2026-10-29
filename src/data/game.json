@@ -16,6 +16,12 @@
   },
   "codes": [
     {
+      "code": "POTENTIAL",
+      "reward": "25 Trait Rerolls · 500 Gems · 25 Lucky Spins · 25,000 Coins",
+      "requirement": null,
+      "sources": 2
+    },
+    {
       "code": "ANEWCHAPTER",
       "reward": "25 Trait Rerolls · 500 Gems · 25 Lucky Spins · 25,000 Coins",
       "requirement": null,
