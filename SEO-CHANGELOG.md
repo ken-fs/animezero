@@ -14,4 +14,6 @@
 
 **复查**：📅 2026-12-01（线上标题是不是 November / December；12-01 后巡检有没有点名这些页；GSC 这几页 28 天 CTR / 点击对比 11-17 前）
 
+**当天跟进**：1e5c07c：autopilot 复核 tier 榜单和码表，LAST_CHECKED / codesChecked 改成 11-17，/tier-list/ 线上变成 November 2026。
+
 **结果**：（待补）
