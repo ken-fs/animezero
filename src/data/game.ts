@@ -72,7 +72,7 @@ export const sortedWeapons = [...weapons].sort(
 );
 
 /** ISO date of the last pass over every source this site uses. */
-export const LAST_CHECKED = "2026-10-17";
+export const LAST_CHECKED = "2026-11-17";
 
 /** ISO date the code list was last checked against the code sources (game.json → game.codesChecked). */
 export const CODES_CHECKED: string = raw.game.codesChecked;
