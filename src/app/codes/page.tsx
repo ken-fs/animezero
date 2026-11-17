@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { codes, game, redeemSteps, LAST_CHECKED } from "@/data/game";
+import { codes, game, redeemSteps, CODES_CHECKED, monthYear } from "@/data/game";
 import { CopyCode } from "@/components/copy-code";
 import { VideoEmbed } from "@/components/video-embed";
 import { VIDEOS } from "@/data/videos";
@@ -9,7 +9,7 @@ import { AdsterraBanner } from "@/components/adsterra-banner";
 import { LEADERBOARD, RECTANGLE } from "@/lib/ads";
 
 export const metadata: Metadata = {
-  title: `Anime Zero codes (October 2026) — ${codes.length} working codes`,
+  title: `Anime Zero codes (${monthYear(CODES_CHECKED)}) — ${codes.length} working codes`,
   description: `All ${codes.length} working Anime Zero codes with the exact reward for each — Coins, Gems, Lucky Spins and Trait Rerolls — plus the level requirements and how to redeem them.`,
   alternates: { canonical: "/codes/" },
 };
@@ -53,7 +53,7 @@ export default function CodesPage() {
       </nav>
 
       <header className="pt-6 pb-10">
-        <p className="tag">Updated {LAST_CHECKED}</p>
+        <p className="tag">Updated {CODES_CHECKED}</p>
         <h1 className="mt-3 max-w-[22ch] text-3xl font-semibold tracking-tight sm:text-4xl">
           Anime Zero codes
         </h1>

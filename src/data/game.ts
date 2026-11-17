@@ -74,6 +74,16 @@ export const sortedWeapons = [...weapons].sort(
 /** ISO date of the last pass over every source this site uses. */
 export const LAST_CHECKED = "2026-10-17";
 
+/** ISO date the code list was last checked against the code sources (game.json → game.codesChecked). */
+export const CODES_CHECKED: string = raw.game.codesChecked;
+
+/**
+ * "November 2026" for page titles, from a check date — never type the month by hand
+ * (2026-11-17 /codes/ and /tier-list/ still said "October 2026"). Re-checking a page = bumping its date.
+ */
+export const monthYear = (iso: string) =>
+  new Date(`${iso}T00:00:00Z`).toLocaleDateString("en-US", { month: "long", year: "numeric", timeZone: "UTC" });
+
 /**
  * Visits per favourite — the retention proxy the radar uses to separate games
  * players commit to from games they walk through. Lower is stickier; the fleet

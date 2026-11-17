@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { weapons, LAST_CHECKED } from "@/data/game";
+import { weapons, LAST_CHECKED, monthYear } from "@/data/game";
 import { RarityChip } from "@/components/rarity-chip";
 import { VideoEmbed } from "@/components/video-embed";
 import { VIDEOS } from "@/data/videos";
@@ -8,7 +8,7 @@ import { AdsterraBanner } from "@/components/adsterra-banner";
 import { RECTANGLE } from "@/lib/ads";
 
 export const metadata: Metadata = {
-  title: "Anime Zero tier list (October 2026) — what the rankings agree on",
+  title: `Anime Zero tier list (${monthYear(LAST_CHECKED)}) — what the rankings agree on`,
   description:
     "The Anime Zero weapon rankings that published tier lists actually agree on, the tier gaps they disagree about, and a repeatable method for judging your own pulls without trusting a stranger's S-tier.",
   alternates: { canonical: "/tier-list/" },
